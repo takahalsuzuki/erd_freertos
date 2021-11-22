@@ -1,0 +1,55 @@
+In [100]: pt2.plot()
+        : 00000               00010               00020               00030
+        : |                   |                   |                   |
+t1      : |X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _
+t2      : |_ X _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|_ X
+VS      : |_ _ v v _ _ _ _|v v _ _ _ _ _ _|v v _ _ _ _ _ _|_ _ _ _ v v _ _
+t3      : |_ _ _ _ X _ _ X|_ _ _ X _ X _ _|_ _ _ X _ X _ _|_ _ X X _ _ _ _
+t4      : |_ _ X X _ _ _ _ X X _ _ _ _|X _ X X _ _ _ _ X _ _ _ _ _|X X _ _
+
+
+In [101]: pt2.plot(32,32)
+        : 00032               00042               00052               00062
+        : |                   |                   |                   |
+t1      :  _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _
+t2      :  _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|_ X _ _
+VS      : |v v _ _ _ _ _ _|_ _ _ v v _ _ _|_ v _ _ _ _ _ _|v v _ _ _ _ _ _
+t3      : |_ _ X _ _ X _ _|_ X _ _ _ _ X _|_ _ _ X X _ _ _|_ _ X X _ _ _ _
+t4      :  X X _ _ _ _ _ _ _ _|_ X X _ _ X _ X _ _ _ _ _ _|X X _ _ _ _ X X
+
+
+In [102]: pt2.plot(64,32)
+        : 00064               00074               00084               00094
+        : |                   |                   |                   |
+t1      :  _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X
+t2      :  _ _|X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|_ X _ _ _ _
+VS      : |_ _ _ _ _ _ _ _|_ v v _ _ _ _ _|_ _ _ _ _ _ _ _|v v _ _ _ _ _ _
+t3      : |X _ _ X _ _ _ _|_ _ _ _ X X _ _|_ X X _ _ _ _ _|_ _ _ _ X X _ _
+t4      :  _ _ _ _ _ _|_ X _ X X _ _ _ _ X _ _ _ _|_ _ X X X X _ _ _ _ _ _
+
+
+In [103]: pt2.plot(96,32)
+        : 00096               00106               00116               00126
+        : |                   |                   |                   |
+t1      :  _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _
+t2      : |X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|_ X _ _ _ _|X _
+VS      : |_ _ v v _ _ _ _|v _ _ _ _ _ _ _|v v _ _ _ _ _ _|_ _ _ _ _ _ _ _
+t3      : |_ X _ _ _ X _ _|_ _ X X _ _ _ _|_ _ _ _ X X _ _|_ _ X X _ _ _ _
+t4      :  _ _|X X _ _ _ X X _ _ _ _ _ _ _|X X _ _ _ _ X X _ _ _ _ _ _|_ X
+
+
+In [104]: pt2.plot(128,32)
+        : 00128               00138               00148               00158
+        : |                   |                   |                   |
+t1      :  _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _|X _ _ _ _
+t2      :  _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|X _ _ _ _ _|_ X _ _ _ _|X _ _ _
+VS      : |v v _ _ _ _ _ _|_ _ _ _ _ _ _ _|_ _ v _ _ _ _ _|_ _ v _ _ v _ _
+t3      : |_ _ _ X _ X _ _|X X _ _ _ _ _ _|_ _ _ X X _ _ _|X X _ _ _ _ _ _
+t4      :  X X _ _ _ _ X _ _ _ _ _|_ X X X _ _ X _ _ _ _ _ _ _|X _ _ X X X
+
+In [5]: f4.get_erd_wcrt_sim()
+Out[5]:
+([14, 13, 10],
+ [SchedResult(TaskMeet=[(WCRT 2/T=5 @ tick 1, AFJ 1, RFJ 1), (WCRT 3/T=6 @ tick 2, AFJ 2, RFJ 2), (WCRT 5/T=8 @ tick 4, AFJ 3, RFJ 3), (WCRT 14/T=14 @ tick 13, AFJ 10, RFJ 10), (WCRT 5/T=5 @ tick 124, AFJ 4, RFJ 4)], meet=True, first_deadline_tick=0),
+  SchedResult(TaskMeet=[(WCRT 1/T=5 @ tick 0, AFJ 0, RFJ 0), (WCRT 3/T=6 @ tick 2, AFJ 2, RFJ 2), (WCRT 5/T=8 @ tick 4, AFJ 3, RFJ 3), (WCRT 13/T=14 @ tick 12, AFJ 9, RFJ 9), (WCRT 5/T=6 @ tick 28, AFJ 4, RFJ 3)], meet=True, first_deadline_tick=0),
+  SchedResult(TaskMeet=[(WCRT 1/T=5 @ tick 0, AFJ 0, RFJ 0), (WCRT 2/T=6 @ tick 1, AFJ 1, RFJ 1), (WCRT 8/T=8 @ tick 7, AFJ 6, RFJ 6), (WCRT 10/T=14 @ tick 9, AFJ 6, RFJ 6), (WCRT 8/T=8 @ tick 367, AFJ 6, RFJ 4)], meet=True, first_deadline_tick=0)])

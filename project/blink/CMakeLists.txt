@@ -11,7 +11,7 @@ pico_sdk_init()
 
 
 add_executable(hello_world
-    project/hello/main.cpp 
+    src/main.cpp 
 )
 
 # Add pico_stdlib library which aggregates commonly used features
@@ -33,29 +33,3 @@ add_custom_command(TARGET hello_world
         COMMAND arm-none-eabi-size hello_world.elf
         )
 # rest of your project
-
-add_executable(blink
-    project/blink/main.cpp 
-)
-
-target_link_libraries(blink pico_stdlib)
-pico_add_extra_outputs(blink)
-target_link_libraries(blink FreeRTOS pico-cpp)
-add_custom_command(TARGET blink
-        POST_BUILD
-        COMMAND arm-none-eabi-size blink.elf
-        )
-
-
-#####
-add_executable(erd
-    project/erd/main.cpp 
-)
-
-target_link_libraries(erd pico_stdlib)
-pico_add_extra_outputs(erd)
-target_link_libraries(erd FreeRTOS pico-cpp)
-add_custom_command(TARGET erd
-        POST_BUILD
-        COMMAND arm-none-eabi-size erd.elf
-        )

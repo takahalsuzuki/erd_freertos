@@ -5,6 +5,7 @@
 #include "GPIO.hpp"
 #include <array>
 
+volatile unsigned long ulHighFrequencyTimerTicks;
 
 static pico_cpp::GPIO_Pin ledPin(25,pico_cpp::PinType::Output);
 void vTaskCode( void * pvParameters )
